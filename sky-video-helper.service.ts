@@ -1,4 +1,13 @@
 /* global angular */
+
+interface skyVideoHelper {
+	getObjFromString(string):ng.IPromise<skyVideoObj>;
+}
+interface skyVideoObj {
+	embed:string;
+	poster:string;
+}
+
 (function () {
 	'use strict';
 
@@ -6,7 +15,7 @@
 
 	skyVideoHelper.$inject = ['$q','$http'];
 
-	function skyVideoHelper($q,$http) {
+	function skyVideoHelper($q,$http):skyVideoHelper {
 
 		var getObjFromString = function(string) {
 			var defer=$q.defer();
