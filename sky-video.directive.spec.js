@@ -22,7 +22,7 @@
 		}));
 
 		beforeEach(function() {
-			element = angular.element('<div sky-video="https://www.youtube.com/watch?v=mxzgwJ8tSE0"></div>');
+			element = angular.element('<sky-video src="https://www.youtube.com/watch?v=mxzgwJ8tSE0"></sky-video>');
 			$compile(element)($rootScope);
 			scope=element.scope();
 
@@ -35,7 +35,7 @@
 		});
 
 		it('should only contain button until clicked', function() {
-			expect(html).toBe('<div style="padding-top:56.25%;"><button no-uniform="" title="Play video"></button></div>');
+			expect(html).toBe('<div style="padding-top:56.25%;"><button class="video">play</button></div>');
 		});
 
 		it('should inject iframe when clicked',function() {
@@ -51,7 +51,7 @@
 			element.triggerHandler('click');
 			html = element.html();
 
-			expect(element.find('iframe')[0].src).toBe('http://www.youtube.com/embed/mxzgwJ8tSE0?rel=0&controls=1&showinfo=0&autoplay=true');
+			expect(element.find('iframe')[0].src).toBe('http://www.youtube.com/embed/mxzgwJ8tSE0?rel=0&controls=1&showinfo=0&autoplay=true&enablejsapi=1');
 		});
 
 

@@ -1,11 +1,13 @@
 /* global angular */
 
-interface skyVideoHelper {
-	getObjFromString(string):ng.IPromise<skyVideoObj>;
-}
-interface skyVideoObj {
-	embed:string;
-	poster:string;
+declare module sky {
+	interface skyVideoHelper {
+		getObjFromString(string):ng.IPromise<skyVideoObj>;
+	}
+	interface skyVideoObj {
+		embed:string;
+		poster:string;
+	}
 }
 
 (function () {
@@ -15,7 +17,7 @@ interface skyVideoObj {
 
 	skyVideoHelper.$inject = ['$q','$http'];
 
-	function skyVideoHelper($q,$http):skyVideoHelper {
+	function skyVideoHelper($q,$http):sky.skyVideoHelper {
 
 		var getObjFromString = function(string) {
 			var defer=$q.defer();
@@ -41,7 +43,7 @@ interface skyVideoObj {
 				match = string.match(/^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#\&\?]*).*/);
 				if (match&&match[7].length==11){
 					defer.resolve({
-						embed:'//www.youtube.com/embed/'+match[7]+'?rel=0&controls=1&showinfo=0&autoplay=true',
+						embed:'//www.youtube.com/embed/'+match[7]+'?rel=0&controls=1&showinfo=0&autoplay=true&enablejsapi=1',
 						poster:'//i.ytimg.com/vi/'+match[7]+'/0.jpg'
 					});
 				} else {

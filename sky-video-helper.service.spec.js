@@ -25,7 +25,7 @@
 				$rootScope.$digest();
 
 				var youtubeId=res.embed.match(/embed\/([-\w]+)/i)[1];
-				expect(res.embed).toBe('//www.youtube.com/embed/'+youtubeId+'?rel=0&controls=1&showinfo=0&autoplay=true');
+				expect(res.embed).toBe('//www.youtube.com/embed/'+youtubeId+'?rel=0&controls=1&showinfo=0&autoplay=true&enablejsapi=1');
 				expect(res.poster).toBe('//i.ytimg.com/vi/'+youtubeId+'/0.jpg');
 			});
 

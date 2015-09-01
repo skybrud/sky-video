@@ -10,7 +10,7 @@
 	 * Shows poster with custom play-button for fast load,
 	 * replaces with real video once clicked.
 	 *
-	 * Usage: <div sky-video="https://www.youtube.com/watch?v=mxzgwJ8tSE0"></div>
+	 * Usage: <sky-video src="https://www.youtube.com/watch?v=mxzgwJ8tSE0"></sky-video>
 	 *
 	 **/
 
@@ -20,16 +20,17 @@
 
 	function skyVideo(skyVideoHelper) {
 		var directive = {
-			restrict:'A',
-			template:'<div style="padding-top:56.25%;"><button no-uniform title="Play video"></button></div>', /* 56.25% because 16:9 */
-			link:link
+			restrict: 'E',
+			scope: {},
+			template: '<div style="padding-top:56.25%;"><button class="video">play</button></div>', /* 56.25% because 16:9 */
+			link: link
 		};
 
-		function link(scope,element,attributes) {
+		function link(scope, element, attributes) {
 
-			var videoElement = angular.element('<iframe />');
+			var videoElement:any = angular.element('<iframe />');
 
-			skyVideoHelper.getObjFromString(attributes.skyVideo).then(function(video) {
+			skyVideoHelper.getObjFromString(attributes.src).then(function(video) {
 				element.css({backgroundImage:'url('+video.poster+')'});
 				element.one('click', function(e) {
 					e.preventDefault();
@@ -40,6 +41,23 @@
 					element.append(videoElement);
 					return false;
 				});
+				
+				element.on('skyVideo:play', function() {
+					if (element.hasClass('playing')) {
+						videoElement[0].contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+						videoElement[0].contentWindow.postMessage('{"method":"play"}', '*');
+					} else {
+						element.triggerHandler('click');
+					}
+				});
+				element.on('skyVideo:pause', function() {
+					if (!element.hasClass('playing')) {
+						return
+					}
+					videoElement[0].contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+					videoElement[0].contentWindow.postMessage('{"method":"pause"}', '*');
+				});
+				
 			}, function(err) {
 				throw(err);
 			});
