@@ -1,8 +1,13 @@
 # sky-video
 
 Angular-module for embedding video. 
+Takes most kinds of url's for **youtube** or **vimeo** videos. Shows poster with custom play-button for fast load, replaces with real video once clicked.
 
-Please refer to the code-files for usage and documentation!
+### Usage
+
+```<sky-video src="https://www.youtube.com/watch?v=mxzgwJ8tSE0"></sky-video>```
+
+Listens to events `skyVideo:play` and `skyVideo:pause`.
 
 ### Credits
 
