@@ -31,7 +31,9 @@
 			var videoElement:any = angular.element('<iframe />');
 
 			skyVideoHelper.getObjFromString(attributes.src).then(function(video) {
-				element.css({backgroundImage:'url('+video.poster+')'});
+				let background = attributes.poster || video.poster;
+
+				element.css({backgroundImage:'url('+background+')'});
 				element.one('click', function(e) {
 					e.preventDefault();
 					element.addClass('playing');
