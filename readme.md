@@ -1,6 +1,6 @@
 # sky-video
 
-A Vue component for showing Youtube and Vimeo videos.
+A Vue component for showing YouTube and Vimeo videos.
 
 ## Dependencies
 
