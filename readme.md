@@ -1,14 +1,18 @@
 # sky-video
 
-Angular-module for embedding video. 
-Takes most kinds of url's for **youtube** or **vimeo** videos. Shows poster with custom play-button for fast load, replaces with real video once clicked.
+A Vue component for showing Youtube and Vimeo videos.
 
-### Usage
+## Dependencies
 
-```<sky-video src="https://www.youtube.com/watch?v=mxzgwJ8tSE0"></sky-video>```
+- [Vue](https://vuejs.org/)
 
-Listens to events `skyVideo:play` and `skyVideo:pause`.
+## Usage
 
-### Credits
+`<sky-video src="URL" poster="imageURL"></sky-video>`
+
+- `src` should be a valid Vimeo or YouTube embed URL.
+- `poster` is just a URL to an image.
+
+## Credits
 
 This module is made by the Frontenders at [skybrud.dk](http://www.skybrud.dk/). Feel free to use it in any way you want. Feedback, questions and bugreports should be posted as issues. Pull-requests appreciated!
