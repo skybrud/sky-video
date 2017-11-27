@@ -6,7 +6,7 @@
  */
 
 export default {
-	name: 'sky-video',
+	name: 'SkyVideo',
 	props: ['src', 'poster'],
 	data() {
 		return {
@@ -33,11 +33,19 @@ export default {
 			return iframeSrc;
 		},
 		iframePoster() {
+			if (!this.poster) {
+				console.warn('SkyVideo: There are no poster defined.');
+				return '';
+			}
+
 			return `background-image: url('${this.poster}')`;
+		},
+		defaultButton() {
+			return this.$slots.play === undefined;
 		},
 	},
 };
 </script>
 
-<style src="./sky-video.scss"></style>
-<template src="./sky-video.html"></template>
+<style src="./SkyVideo.scss"></style>
+<template src="./SkyVideo.html"></template>

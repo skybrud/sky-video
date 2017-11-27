@@ -1,26 +1,30 @@
 <div class="sky-video">
-
-	<div v-on:click.once="embed">
+	<div @click.once="embed">
 		<div class="sky-video-click">
 			<label>
-				<button class="sky-video-play"></button>
+				<button
+					:class="['sky-video-play', {'default-button': defaultButton}]"
+				>
+					<slot name="play" />
+				</button>
 			</label>
 		</div>
 
 		<div
+			v-if="embedded"
 			class="sky-video-iframe"
-			v-if="embedded">
-
+		>
 			<iframe
 				frameborder="0"
 				allowfullscreen="allowfullscreen"
-	  			v-bind:src="iframeSrc">
-			</iframe>
+				:src="iframeSrc"
+			/>
 		</div>
 
 		<div
+			v-else
 			class="sky-video-poster"
-			v-bind:style="iframePoster"
-			v-else />
+			:style="iframePoster"
+		/>
 	</div>
 </div>

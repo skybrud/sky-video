@@ -1,6 +1,6 @@
 import Vue from 'vue';
-import SkyVideo from './sky-video';
+import SkyVideo from './SkyVideo';
 
-Vue.component('sky-video', SkyVideo);
+Vue.component('SkyVideo', SkyVideo);
 
 export default SkyVideo;
