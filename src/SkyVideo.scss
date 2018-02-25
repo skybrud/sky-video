@@ -1,28 +1,7 @@
-$color-1: green !default;
-
 .sky-video {
 	position: relative;
-	height: 490px;
+	padding-top: 56.25%;
 	width: 100%;
-
-	label {
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		position: absolute;
-
-		&:before {
-			content: '';
-			top: 0;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			position: absolute;
-			background-color: transparentize($color-1, 0.2);
-			z-index: 1;
-		}
-	}
 }
 
 button.sky-video-play {
@@ -71,17 +50,27 @@ button.sky-video-play {
 	left: 0;
 	right: 0;
 	bottom: 0;
-	z-index: 3;
+	z-index: 2;
 	position: absolute;
 
-	iframe {
+	iframe,
+	div {
 		width: 100%;
 		height: 100%;
+	}
+
+	.playing & {
+		z-index: 4;
 	}
 }
 
 .sky-video-click {
-	padding-top: 56.25%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 3;
 }
 
 .sky-video-poster {
@@ -89,7 +78,7 @@ button.sky-video-play {
 	left: 0;
 	right: 0;
 	bottom: 0;
-	z-index: 0;
+	z-index: 1;
 	position: absolute;
 	background-size: cover;
 	background-position: center;

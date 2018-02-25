@@ -1,17 +1,30 @@
-<div class="sky-video">
-	<div @click.once="embed">
-		<div class="sky-video-click">
-			<label>
-				<button :class="['sky-video-play', {'default-button': defaultButton}]">
-					<slot name="play" />
-				</button>
-			</label>
-		</div>
-
-		<div v-if="embedded" class="sky-video-iframe">
-			<iframe frameborder="0" allowfullscreen="allowfullscreen" :src="iframeSrc" />
-		</div>
-
-		<div v-else class="sky-video-poster" :style="iframePoster" />
+<div
+	ref="container"
+	:class="['sky-video', { 'playing': embedded }, coverMode]"
+>
+	<div
+		v-if="autoplayDisabled"
+		class="sky-video-click"
+		@click.once="embed"
+	>
+		<button
+			v-if="!embedded"
+			:class="['sky-video-play', {'default-button': defaultButton}]"
+		>
+			<slot name="play" />
+		</button>
 	</div>
+
+	<div
+		v-show="embedded"
+		class="sky-video-iframe"
+	>
+		<div ref="player"></div>
+	</div>
+
+	<div
+		v-if="!embedded"
+		class="sky-video-poster"
+		:style="videoPoster"
+	/>
 </div>
