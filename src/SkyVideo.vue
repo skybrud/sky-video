@@ -4,10 +4,9 @@ import VimeoPlayer from '@vimeo/player';
 import GetVideoId from 'get-video-id';
 // import SkyWindow from 'SkyWindow';
 /*
-	* TODO: URLs
-	* Might need to check URLs better.
-	*/
-//  ['src', 'poster'],
+* TODO: URLs
+* Might need to check URLs better.
+*/
 export default {
 	name: 'SkyVideo',
 	props: {
