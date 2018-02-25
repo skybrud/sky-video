@@ -2,7 +2,7 @@
 	"name": "sky-video",
 	"version": "0.1.1",
 	"description": "Vue component for easy video service embedding",
-	"main": "dist/sky-video.js",
+	"main": "dist/skyvideo.js",
 	"scripts": {
 		"build": "rimraf ./dist && webpack --config ./webpack.config.js"
 	},
