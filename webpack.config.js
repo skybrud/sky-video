@@ -21,7 +21,7 @@ var config = {
 			},
 			{
 				test: /\.css$/,
-				loader: 'style!scss!css',
+				loader: 'style!less!css',
 			},
 		],
 	},

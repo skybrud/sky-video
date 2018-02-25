@@ -2,7 +2,7 @@
 import YoutubePlayer from 'youtube-player';
 import VimeoPlayer from '@vimeo/player';
 import GetVideoId from 'get-video-id';
-import SkyWindow from 'SkyWindow';
+// import SkyWindow from 'SkyWindow';
 /*
 	* TODO: URLs
 	* Might need to check URLs better.
@@ -131,9 +131,9 @@ export default {
 			});
 		}
 
-		SkyWindow.resize.subscribe(() => {
-			this.setContainer();
-		});
+		// SkyWindow.resize.subscribe(() => {
+		// 	this.setContainer();
+		// });
 
 		if (this.shouldAutoplay()) {
 			this.embed();
