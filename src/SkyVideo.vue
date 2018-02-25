@@ -2,7 +2,7 @@
 import YoutubePlayer from 'youtube-player';
 import VimeoPlayer from '@vimeo/player';
 import GetVideoId from 'get-video-id';
-// import SkyWindow from 'SkyWindow';
+import SkyWindow from 'sky-window';
 /*
 * TODO: URLs
 * Might need to check URLs better.
