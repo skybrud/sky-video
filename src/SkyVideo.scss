@@ -1,4 +1,4 @@
-@import '~styles/variables';
+$color-1: green !default;
 
 .sky-video {
 	position: relative;
@@ -81,11 +81,7 @@ button.sky-video-play {
 }
 
 .sky-video-click {
-	padding-top: 60%;
-
-	@include gt(10) {
-		padding-top: 43.75%;
-	}
+	padding-top: 56.25%;
 }
 
 .sky-video-poster {
