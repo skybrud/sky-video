@@ -20,8 +20,8 @@ var config = {
 				loader: 'vue-loader',
 			},
 			{
-				test: /\.css$/,
-				loader: 'style!less!css',
+				test: /\.scss$/,
+				loader: 'style!scss!css',
 			},
 		],
 	},
