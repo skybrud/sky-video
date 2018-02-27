@@ -88,7 +88,7 @@ export default {
 			return this.$slots.play === undefined;
 		},
 	},
-	created() {
+	beforeMount() {
 		this.$set(this, 'source', GetVideoId(this.src));
 
 		if (this.source.service === 'vimeo') {
@@ -182,17 +182,19 @@ export default {
 				return true;
 			}
 
-			if (this.autoplay === 'touch') {
-				if (window.innerWidth <= 1024) {
-					this.autoplayDisabled = false;
-					return true;
+			if (typeof window !== 'undefined') {
+				if (this.autoplay === 'touch') {
+					if (window.innerWidth <= 1024) {
+						this.autoplayDisabled = false;
+						return true;
+					}
 				}
-			}
 
-			if (this.autoplay === 'desktop') {
-				if (window.innerWidth > 1024) {
-					this.autoplayDisabled = false;
-					return true;
+				if (this.autoplay === 'desktop') {
+					if (window.innerWidth > 1024) {
+						this.autoplayDisabled = false;
+						return true;
+					}
 				}
 			}
 
