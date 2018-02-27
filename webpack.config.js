@@ -22,6 +22,7 @@ var config = {
 					preserveWhitespace: false,
 					loaders: {
 						css: 'vue-style-loader!css-loader!sass-loader',
+						scss: 'vue-style-loader!css-loader!sass-loader',
 					},
 				},
 			},
