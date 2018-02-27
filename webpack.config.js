@@ -20,6 +20,9 @@ var config = {
 				loader: 'vue-loader',
 				options: {
 					preserveWhitespace: false,
+					postcss: [
+						require('autoprefixer')(),
+					],
 					loaders: {
 						css: 'vue-style-loader!css-loader!sass-loader',
 						scss: 'vue-style-loader!css-loader!sass-loader',

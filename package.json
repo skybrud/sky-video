@@ -15,6 +15,7 @@
   "dependencies": {
     "@vimeo/player": "^2.2.1",
     "get-video-id": "^3.0.0",
+    "postcss-loader": "^2.1.1",
     "sky-window": "^1.0.2",
     "youtube-player": "^5.4.0"
   },
