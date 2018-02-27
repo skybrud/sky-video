@@ -1,6 +1,6 @@
 {
   "name": "sky-video",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Vue component for easy video service embedding",
   "main": "dist/skyvideo.js",
   "scripts": {
