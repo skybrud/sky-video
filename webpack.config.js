@@ -18,10 +18,12 @@ var config = {
 			{
 				test: /\.vue$/,
 				loader: 'vue-loader',
-			},
-			{
-				test: /\.scss$/,
-				loader: 'style!scss!css',
+				options: {
+					preserveWhitespace: false,
+					loaders: {
+						css: 'vue-style-loader!css-loader!sass-loader',
+					},
+				},
 			},
 		],
 	},
