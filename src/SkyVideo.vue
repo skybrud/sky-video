@@ -1,12 +1,9 @@
 <script>
-import YoutubePlayer from 'youtube-player';
-import VimeoPlayer from '@vimeo/player';
+// import YoutubePlayer from 'youtube-player';
+// import VimeoPlayer from '@vimeo/player';
 import GetVideoId from 'get-video-id';
 import SkyWindow from 'sky-window';
-/*
-* TODO: URLs
-* Might need to check URLs better.
-*/
+
 export default {
 	name: 'SkyVideo',
 	props: {
@@ -50,6 +47,7 @@ export default {
 			autoplayDisabled: true,
 			source: null,
 			player: null,
+			playerClass: null,
 			embedded: false,
 			isYoutube: false,
 			isVimeo: false,
@@ -93,7 +91,9 @@ export default {
 
 		if (this.source.service === 'vimeo') {
 			this.isVimeo = true;
+			this.$set(this, 'playerClass', () => import('@vimeo/player'));
 		} else if (this.source.service === 'youtube') {
+			this.$set(this, 'playerClass', () => import('youtube-player'));
 			this.isYoutube = true;
 		} else {
 			console.error('SkyVideo: Unsupported source');
@@ -182,19 +182,17 @@ export default {
 				return true;
 			}
 
-			if (typeof window !== 'undefined') {
-				if (this.autoplay === 'touch') {
-					if (window.innerWidth <= 1024) {
-						this.autoplayDisabled = false;
-						return true;
-					}
+			if (this.autoplay === 'touch') {
+				if (window.innerWidth <= 1024) {
+					this.autoplayDisabled = false;
+					return true;
 				}
+			}
 
-				if (this.autoplay === 'desktop') {
-					if (window.innerWidth > 1024) {
-						this.autoplayDisabled = false;
-						return true;
-					}
+			if (this.autoplay === 'desktop') {
+				if (window.innerWidth > 1024) {
+					this.autoplayDisabled = false;
+					return true;
 				}
 			}
 
