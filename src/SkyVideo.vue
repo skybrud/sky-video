@@ -1,7 +1,7 @@
 <script>
 // import YoutubePlayer from 'youtube-player';
 // import VimeoPlayer from '@vimeo/player';
-import GetVideoId from 'get-video-id';
+// import GetVideoId from 'get-video-id';
 import SkyWindow from 'sky-window';
 
 export default {
@@ -87,6 +87,7 @@ export default {
 		},
 	},
 	beforeMount() {
+		const GetVideoId = () => import('get-video-id');
 		this.$set(this, 'source', GetVideoId(this.src));
 
 		if (this.source.service === 'vimeo') {
