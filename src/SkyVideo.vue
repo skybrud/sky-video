@@ -130,9 +130,9 @@ export default {
 			});
 		}
 
-		// SkyWindow.resize.subscribe(() => {
-		// 	this.setContainer();
-		// });
+		SkyWindow.resize.subscribe(() => {
+			this.setContainer();
+		});
 
 		if (this.shouldAutoplay()) {
 			this.embed();
