@@ -2,13 +2,6 @@
 # yarn lockfile v1
 
 
-"@vimeo/player@^2.2.1":
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/@vimeo/player/-/player-2.2.1.tgz#2537c2224b25529a8680b375e33dea6f0fd99102"
-  dependencies:
-    es6-collections "0.5.6"
-    native-promise-only "0.8.1"
-
 abbrev@1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-1.1.1.tgz#f8f2c887ad10bf67f634f005b6987fed3179aac8"
@@ -1443,7 +1436,7 @@ de-indent@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/de-indent/-/de-indent-1.0.2.tgz#b2038e846dc33baa5796128d0804b455b8c1e21d"
 
-debug@^2.2.0, debug@^2.6.6, debug@^2.6.8:
+debug@^2.2.0, debug@^2.6.8:
   version "2.6.9"
   resolved "https://registry.yarnpkg.com/debug/-/debug-2.6.9.tgz#5d128515df134ff327e90a4c93f4e077a536341f"
   dependencies:
@@ -1582,10 +1575,6 @@ es5-ext@^0.10.14, es5-ext@^0.10.35, es5-ext@^0.10.9, es5-ext@~0.10.14:
   dependencies:
     es6-iterator "~2.0.3"
     es6-symbol "~3.1.1"
-
-es6-collections@0.5.6:
-  version "0.5.6"
-  resolved "https://registry.yarnpkg.com/es6-collections/-/es6-collections-0.5.6.tgz#5552e800ad12c1820cda2bd4a79ae7dbb03d89a2"
 
 es6-iterator@^2.0.1, es6-iterator@~2.0.1, es6-iterator@~2.0.3:
   version "2.0.3"
@@ -1918,10 +1907,6 @@ get-caller-file@^1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/get-caller-file/-/get-caller-file-1.0.2.tgz#f702e63127e7e231c160a80c1554acb70d5047e5"
 
-get-src@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/get-src/-/get-src-1.0.1.tgz#ca11dbe4a93c7f3aa85cec95fcb0b2dfaa9539ee"
-
 get-stdin@^4.0.1:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/get-stdin/-/get-stdin-4.0.1.tgz#b968c6b0a04384324902e8bf1a5df32579a450fe"
@@ -1929,12 +1914,6 @@ get-stdin@^4.0.1:
 get-stream@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/get-stream/-/get-stream-3.0.0.tgz#8e943d1358dc37555054ecbe2edb05aa174ede14"
-
-get-video-id@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/get-video-id/-/get-video-id-3.0.0.tgz#538cd918b14e91e69b616df10aba169d82cd44a9"
-  dependencies:
-    get-src "^1.0.1"
 
 getpass@^0.1.1:
   version "0.1.7"
@@ -2549,10 +2528,6 @@ load-json-file@^2.0.0:
     pify "^2.0.0"
     strip-bom "^3.0.0"
 
-load-script@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/load-script/-/load-script-1.0.0.tgz#0491939e0bee5643ee494a7e3da3d2bac70c6ca4"
-
 loader-runner@^2.3.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/loader-runner/-/loader-runner-2.3.0.tgz#f482aea82d543e07921700d5a46ef26fdac6b8a2"
@@ -2804,10 +2779,6 @@ ms@2.0.0:
 nan@^2.3.0, nan@^2.3.2:
   version "2.9.2"
   resolved "https://registry.yarnpkg.com/nan/-/nan-2.9.2.tgz#f564d75f5f8f36a6d9456cca7a6c4fe488ab7866"
-
-native-promise-only@0.8.1:
-  version "0.8.1"
-  resolved "https://registry.yarnpkg.com/native-promise-only/-/native-promise-only-0.8.1.tgz#20a318c30cb45f71fe7adfbf7b21c99c1472ef11"
 
 ncname@1.0.x:
   version "1.0.0"
@@ -3853,12 +3824,6 @@ run-queue@^1.0.0, run-queue@^1.0.3:
   dependencies:
     aproba "^1.1.1"
 
-rxjs@5.0.2:
-  version "5.0.2"
-  resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-5.0.2.tgz#cc6513756daa93cab4085c1b5a19a3e28fb6c6bf"
-  dependencies:
-    symbol-observable "^1.0.1"
-
 safe-buffer@^5.0.1, safe-buffer@^5.1.0, safe-buffer@^5.1.1, safe-buffer@~5.1.0, safe-buffer@~5.1.1:
   version "5.1.1"
   resolved "https://registry.yarnpkg.com/safe-buffer/-/safe-buffer-5.1.1.tgz#893312af69b2123def71f57889001671eeb2c853"
@@ -3964,16 +3929,6 @@ sigmund@^1.0.1:
 signal-exit@^3.0.0:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.2.tgz#b5fdc08f1287ea1178628e415e25132b73646c6d"
-
-sister@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/sister/-/sister-3.0.0.tgz#88eb57047cb283da1e070b1a7cae8212f3bcb2db"
-
-sky-window@^1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/sky-window/-/sky-window-1.0.4.tgz#0106c85a9f68d3abecad96a3253da309fe07b848"
-  dependencies:
-    rxjs "5.0.2"
 
 slash@^1.0.0:
   version "1.0.0"
@@ -4204,10 +4159,6 @@ swap-case@^1.1.0:
   dependencies:
     lower-case "^1.1.1"
     upper-case "^1.1.1"
-
-symbol-observable@^1.0.1:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/symbol-observable/-/symbol-observable-1.2.0.tgz#c22688aed4eab3cdc2dfeacbb561660560a00804"
 
 tapable@^0.2.7:
   version "0.2.8"
@@ -4677,11 +4628,3 @@ yargs@~3.10.0:
     cliui "^2.1.0"
     decamelize "^1.0.0"
     window-size "0.1.0"
-
-youtube-player@^5.4.0:
-  version "5.5.0"
-  resolved "https://registry.yarnpkg.com/youtube-player/-/youtube-player-5.5.0.tgz#95f058534f9544586185551d0d2d33f381f6587a"
-  dependencies:
-    debug "^2.6.6"
-    load-script "^1.0.0"
-    sister "^3.0.0"

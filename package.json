@@ -13,12 +13,6 @@
     "type": "git",
     "url": "https://github.com/skybrud/sky-video.git"
   },
-  "dependencies": {
-    "@vimeo/player": "^2.2.1",
-    "get-video-id": "^3.0.0",
-    "sky-window": "^1.0.4",
-    "youtube-player": "^5.4.0"
-  },
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
