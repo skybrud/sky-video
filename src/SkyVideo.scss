@@ -21,7 +21,7 @@
 	}
 }
 
-button.sky-video-play {
+.sky-video-play {
 	position: relative;
 	z-index: 2;
 	display: inline-block;
@@ -35,30 +35,40 @@ button.sky-video-play {
 	text-align: inherit;
 	vertical-align: baseline;
 	cursor: pointer;
+}
 
-	&.default-button:before,
-	&.default-button:after {
+.sky-video-play.default-button {
+	&:before,
+	&:after {
 		position: absolute;
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
 	}
 
-	&.default-button:before {
+	&:before {
 		content: '';
 		display: block;
 		width: 75px;
 		height: 75px;
 		border: 2px solid #fff;
 		border-radius: 100px;
+		transition: all 0.3s ease;
 	}
 
-	&.default-button:after {
+	&:after {
 		content: '';
 		transform: translate(-40%, -50%);
 		border-left: 30px solid #fff;
 		border-top: 20px solid transparent;
 		border-bottom: 20px solid transparent;
+	}
+
+	&:hover,
+	&:focus {
+		&:before {
+			border-color: transparent;
+		}
 	}
 }
 

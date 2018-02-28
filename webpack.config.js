@@ -2,8 +2,14 @@ const webpack = require('webpack');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const merge = require('webpack-merge');
 const path = require('path');
+const packageJson = require('./package.json');
 
-const name = 'SkyVideo';
+const name = (() => {
+	const capitalise = (string) => string.charAt(0).toUpperCase() + string.slice(1);
+	const nameArray = packageJson.name.split('-');
+
+	return `${capitalise(nameArray[0])}${capitalise(nameArray[1])}`;
+})();
 
 const config = {
 	output: {
