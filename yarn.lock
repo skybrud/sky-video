@@ -3969,9 +3969,9 @@ sister@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/sister/-/sister-3.0.0.tgz#88eb57047cb283da1e070b1a7cae8212f3bcb2db"
 
-sky-window@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/sky-window/-/sky-window-1.0.2.tgz#14b1f98c5185104a5e942e8861c1b644ec773137"
+sky-window@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/sky-window/-/sky-window-1.0.4.tgz#0106c85a9f68d3abecad96a3253da309fe07b848"
   dependencies:
     rxjs "5.0.2"
 

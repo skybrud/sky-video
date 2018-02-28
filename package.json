@@ -4,7 +4,8 @@
   "description": "Vue component for easy video service embedding",
   "main": "dist/skyvideo.js",
   "scripts": {
-    "build": "rimraf ./dist && webpack --config ./webpack.config.js"
+    "build": "rimraf ./dist && webpack --config ./webpack.config.js",
+    "dist": "yarn install && yarn run build"
   },
   "author": "Skybrud.dk",
   "license": "MIT",
@@ -15,7 +16,7 @@
   "dependencies": {
     "@vimeo/player": "^2.2.1",
     "get-video-id": "^3.0.0",
-    "sky-window": "^1.0.2",
+    "sky-window": "^1.0.4",
     "youtube-player": "^5.4.0"
   },
   "devDependencies": {
