@@ -56,6 +56,7 @@ module.exports = [
 		},
 	}),
 	merge(config, {
+		target: 'node',
 		entry: path.resolve(__dirname + '/src/' + name + '.vue'),
 		output: {
 			filename: name.toLowerCase() + '.js',

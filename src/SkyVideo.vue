@@ -1,6 +1,6 @@
 <script>
 import YoutubePlayer from 'youtube-player';
-// import VimeoPlayer from '@vimeo/player';
+import VimeoPlayer from '@vimeo/player';
 import GetVideoId from 'get-video-id';
 import SkyWindow from 'sky-window';
 
@@ -114,7 +114,7 @@ export default {
 					loop: this.loop ? 1 : 0,
 				},
 			});
-		} /* else {
+		} else {
 			// Settings: https://github.com/vimeo/player.js
 			this.player = new VimeoPlayer(this.$refs.player, {
 				width: this.width,
@@ -125,7 +125,7 @@ export default {
 				title: this.info,
 				//color: 'ff0000', // Color supplementing the gray UI
 			});
-		} */
+		}
 
 		SkyWindow.resize.subscribe(() => {
 			this.setContainer();
@@ -160,17 +160,17 @@ export default {
 						});
 				}
 
-				// if (this.isVimeo) {
-				// 	this.player.ready()
-				// 		.then(() => {
-				// 			if (this.mute) {
-				// 				this.player.setVolume(0);
-				// 			}
+				if (this.isVimeo) {
+					this.player.ready()
+						.then(() => {
+							if (this.mute) {
+								this.player.setVolume(0);
+							}
 
-				// 			this.embedded = true;
-				// 			this.player.play();
-				// 		});
-				// }
+							this.embedded = true;
+							this.player.play();
+						});
+				}
 			}
 		},
 		shouldAutoplay() {
