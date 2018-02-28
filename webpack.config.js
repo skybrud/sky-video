@@ -3,7 +3,9 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const merge = require('webpack-merge');
 const path = require('path');
 
-var config = {
+const name = 'SkyVideo';
+
+const config = {
 	output: {
 		path: path.resolve(__dirname + '/dist/'),
 	},
@@ -48,17 +50,17 @@ module.exports = [
 	merge(config, {
 		entry: path.resolve(__dirname + '/src/plugin.js'),
 		output: {
-			filename: 'skyvideo.min.js',
+			filename: name.toLowerCase() + '.min.js',
 			libraryTarget: 'window',
-			library: 'SkyVideo',
+			library: name,
 		},
 	}),
 	merge(config, {
-		entry: path.resolve(__dirname + '/src/SkyVideo.vue'),
+		entry: path.resolve(__dirname + '/src/' + name + '.vue'),
 		output: {
-			filename: 'skyvideo.js',
+			filename: name.toLowerCase() + '.js',
 			libraryTarget: 'umd',
-			library: 'SkyVideo',
+			library: name,
 			umdNamedDefine: true,
 		},
 	}),
