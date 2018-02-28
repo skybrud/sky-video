@@ -1,7 +1,7 @@
 <script>
-// import YoutubePlayer from 'youtube-player';
+import YoutubePlayer from 'youtube-player';
 // import VimeoPlayer from '@vimeo/player';
-// import GetVideoId from 'get-video-id';
+import GetVideoId from 'get-video-id';
 import SkyWindow from 'sky-window';
 
 export default {
@@ -47,7 +47,6 @@ export default {
 			autoplayDisabled: true,
 			source: null,
 			player: null,
-			playerClass: null,
 			embedded: false,
 			isYoutube: false,
 			isVimeo: false,
@@ -87,14 +86,11 @@ export default {
 		},
 	},
 	beforeMount() {
-		const GetVideoId = () => import('get-video-id');
 		this.$set(this, 'source', GetVideoId(this.src));
 
 		if (this.source.service === 'vimeo') {
 			this.isVimeo = true;
-			this.$set(this, 'playerClass', () => import('@vimeo/player'));
 		} else if (this.source.service === 'youtube') {
-			this.$set(this, 'playerClass', () => import('youtube-player'));
 			this.isYoutube = true;
 		} else {
 			console.error('SkyVideo: Unsupported source');
@@ -118,7 +114,7 @@ export default {
 					loop: this.loop ? 1 : 0,
 				},
 			});
-		} else {
+		} /* else {
 			// Settings: https://github.com/vimeo/player.js
 			this.player = new VimeoPlayer(this.$refs.player, {
 				width: this.width,
@@ -129,7 +125,7 @@ export default {
 				title: this.info,
 				//color: 'ff0000', // Color supplementing the gray UI
 			});
-		}
+		} */
 
 		SkyWindow.resize.subscribe(() => {
 			this.setContainer();
@@ -164,17 +160,17 @@ export default {
 						});
 				}
 
-				if (this.isVimeo) {
-					this.player.ready()
-						.then(() => {
-							if (this.mute) {
-								this.player.setVolume(0);
-							}
+				// if (this.isVimeo) {
+				// 	this.player.ready()
+				// 		.then(() => {
+				// 			if (this.mute) {
+				// 				this.player.setVolume(0);
+				// 			}
 
-							this.embedded = true;
-							this.player.play();
-						});
-				}
+				// 			this.embedded = true;
+				// 			this.player.play();
+				// 		});
+				// }
 			}
 		},
 		shouldAutoplay() {
