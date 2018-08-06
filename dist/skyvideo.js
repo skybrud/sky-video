@@ -677,7 +677,7 @@ var Component = __webpack_require__(44)(
   /* cssModules */
   null
 )
-Component.options.__file = "/Users/rudiornhoj/Sites/roernhoej/sky-video/src/SkyVideo.vue"
+Component.options.__file = "/Users/mhelmuth/Sites/mhelmuth/skybrud/sky-video/src/SkyVideo.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] SkyVideo.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -1041,6 +1041,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     attrs: {
       "frameborder": "0",
       "allowfullscreen": "allowfullscreen",
+      "allow": "autoplay",
       "src": _vm.iframeSrc
     }
   })]) : _c('div', {
