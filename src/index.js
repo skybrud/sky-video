@@ -8,13 +8,15 @@ export {
 	SkyVideo,
 };
 
-export default {
-	install(Vue, options) {
-		const { registerComponents } = Object.assign({}, defaults, options);
+export default function install(Vue, options) {
+	if (install.installed === true) {
+		return;
+	}
 
-		if (registerComponents) {
-			// Main component
-			Vue.component(SkyVideo.name, SkyVideo);
-		}
-	},
+	const { registerComponents } = Object.assign({}, defaults, options);
+
+	if (registerComponents) {
+		// Main component
+		Vue.component(SkyVideo.name, SkyVideo);
+	}
 };
