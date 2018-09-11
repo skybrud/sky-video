@@ -2,11 +2,28 @@
 
 A Vue component for showing YouTube and Vimeo videos.
 
-## Dependencies
+## Installation
+```bash
+npm install sky-video
+```
+or
+```bash
+yarn add sky-video
+```
 
-- [Vue](https://vuejs.org/)
 
 ## Usage
+Begin by importing and installing the SkyVideo Vue plugin
+```js
+import Vue from 'vue';
+import SkyVideo from 'sky-video';
+
+// If you want to use the baseline scss add the following line
+import '${YOUR-PROJECT-ROOT-PATH}/node_modules/sky-swiper/src/v.scss';
+
+Vue.use(SkyVideo);
+
+```
 
 `<sky-video src="URL" poster="imageURL"></sky-video>`
 
