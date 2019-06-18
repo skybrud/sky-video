@@ -1,6 +1,6 @@
 {
 	"name": "sky-video",
-	"version": "1.4.0-4",
+	"version": "1.4.0-5",
 	"description": "Vue component for easy video service embedding",
 	"main": "./dist/sky-video.ssr.js",
 	"module": "./dist/sky-video.esm.js",
