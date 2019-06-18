@@ -1,6 +1,11 @@
 # sky-video
 
-A Vue component for showing YouTube and Vimeo videos.
+A Vue component for showing videoes.
+
+## List of supported video formats:
+- YouTube
+- Vimeo
+- Dreambroker
 
 ## Installation
 ```bash
@@ -19,7 +24,7 @@ import Vue from 'vue';
 import SkyVideo from 'sky-video';
 
 // If you want to use the baseline scss add the following line
-import '${YOUR-PROJECT-ROOT-PATH}/node_modules/sky-swiper/src/v.scss';
+import '${YOUR-PROJECT-ROOT-PATH}/node_modules/sky-video/src/v.scss';
 
 Vue.use(SkyVideo);
 
@@ -27,7 +32,7 @@ Vue.use(SkyVideo);
 
 `<sky-video src="URL" poster="imageURL"></sky-video>`
 
-- `src` should be a valid Vimeo or YouTube embed URL.
+- `src` should be a valid Youtube, Vimeo or Dreambroker embed URL.
 - `poster` is just a URL to an image.
 
 ## Credits
