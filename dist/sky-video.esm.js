@@ -18,6 +18,8 @@ var script = {
 				iframeSrc = this.src.replace('vimeo.com', 'player.vimeo.com/video');
 			} else if (this.src.indexOf('youtube') !== -1) {
 				iframeSrc = this.src.replace('watch?v=', 'embed/');
+			} else if (this.src.indexOf('dreambroker') !== -1) {
+				iframeSrc = this.src.replace('dreambroker.com', 'dreambroker.com');
 			}
 			iframeSrc += '?autoplay=true&rel=0';
 			return iframeSrc;
