@@ -1,3 +1,36 @@
 <script src="./SkyVideo.js" />
-<style src="./SkyVideo.scss" />
-<template src="./SkyVideo.html" />
+<style lang="scss" src="./SkyVideo.scss" />
+
+<template>
+    <div class="sky-video">
+        <div @click.once="embed">
+            <div class="sky-video-click">
+                <label>
+                    <button
+                        :class="['sky-video-play', {'default-button': defaultButton}]"
+                    >
+                        <slot name="play" />
+                    </button>
+                </label>
+            </div>
+
+            <div
+                v-if="embedded"
+                class="sky-video-iframe"
+            >
+                <iframe
+                    frameborder="0"
+                    allowfullscreen="allowfullscreen"
+                    allow="autoplay"
+                    :src="iframeSrc"
+                />
+            </div>
+
+            <div
+                v-else
+                class="sky-video-poster"
+                :style="iframePoster"
+            />
+        </div>
+    </div>
+</template>
